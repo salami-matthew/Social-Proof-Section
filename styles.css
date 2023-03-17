@@ -1,0 +1,244 @@
+/* declaring variables for the color pallete for easier implementation */
+:root{
+  /* ### Primary */
+
+--Very-Dark-Magenta: hsl(300, 43%, 22%);
+--Soft-Pink: hsl(333, 80%, 67%);
+
+/* ### Neutral */
+
+--Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+--Light-Grayish-Magenta: hsl(300, 24%, 96%);
+--White: hsl(0, 0%, 100%);
+}
+
+body{
+  margin: 0;
+  font-size: 15px;
+  font-family: 'League Spartan', sans-serif;
+  background-image: url(images/bg-pattern-top-desktop.svg);
+  background-repeat: no-repeat;
+}
+
+.background-bottom{
+  width: 100%;
+  height: 100vh;
+  background-image: url(images/bg-pattern-bottom-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* object-fit: cover; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-container{
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.grid-row1{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-section{
+  width: 35%;
+}
+
+.left-section h1{
+  font-weight: 700;
+  font-size: 45px;
+  color: var(--Very-Dark-Magenta);
+}
+
+.left-section p{
+  color: var(--Dark-Grayish-Magenta);
+  line-height: 1.5;
+  font-weight: 500;
+  width: 100%;
+}
+
+.right-section{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 50%;
+}
+
+
+.ratings{
+  width: 85%;
+  background-color: var(--Light-Grayish-Magenta);
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 5px 0;
+  border-radius: 0.5rem;
+}
+
+
+.ratings:nth-child(2){
+  position: relative;
+  align-self: center;
+}
+.ratings:nth-child(1){
+  align-self: flex-start;
+}
+
+
+.icon-block{
+  margin-left: 20px;
+}
+
+.icon{
+  margin-left: 5px;
+}
+
+.ratings p{
+  color: var(--Very-Dark-Magenta);
+  font-weight: 600;
+  margin-left: 40px;
+}
+
+
+.grid-row2{
+  margin-top: 20px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.cards{
+  text-align: left;
+  color: var(--White);
+  background-color: var(--Very-Dark-Magenta);
+  width: 17rem;
+  height: 80%;
+  border-radius: 0.5rem;
+  padding: 0px 20px 20px;
+}
+
+.cards:nth-child(2){
+  align-self: center;
+}
+.cards:nth-child(3){
+  align-self: flex-end;
+}
+
+
+.cards p{
+  line-height: 1.5;
+  
+}
+
+.card-header{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.card-header img{
+  width: 3rem;
+  border-radius: 100%;
+}
+
+.card-header-name{
+  margin-left: 20px;
+  /* line-height: 0; */
+}
+
+.card-header-name span{
+  color: var(--Soft-Pink);
+}
+
+
+
+.attribution {
+  margin-top: 30px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width:900px) {
+  body{
+    text-align: center;
+    background-image: url(images/bg-pattern-top-mobile.svg);
+  }
+
+   .background-bottom{
+    background-image: url(images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: max-content;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .grid-container{
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    height: initial;
+  }
+  .grid-row1, .grid-row2{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; 
+  }
+
+  .left-section, .right-section{
+    width: 80%;
+  }
+
+  .ratings{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icon-block{
+    margin-top: 10px;
+  }
+  .ratings:nth-child(1){
+    align-self: center;
+  }
+  .ratings:nth-child(3){
+    align-self: center;
+  }
+
+  .grid-row2{
+    margin-top: 50px;
+    height: initial;
+  }
+
+  .cards{
+    align-items: center;
+    width: 72%;
+    margin-bottom: 20px;
+  }
+  
+  .cards:nth-child(3){
+    align-self: center;
+  }
+
+  .attribution{
+    justify-self: flex-end;
+    padding-bottom: 20px;
+  }
+}
